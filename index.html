@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" type="text/css">
+    <!--scripts-->
+    <script src="https://cdn.jsdelivr.net/npm/onnxjs/dist/onnx.min.js"></script>
+    <script src="js/ascii.js" defer></script>
+    <script src="js/mnist.js" defer></script>
+</head>
+<body>
+    <header class="banner">
+        <nav>
+            <ul>
+                <li class="logo"><a href="index.html">Home</a></li>
+                <li><a href="pages/asciify.html">Asciify</a></li>
+                <li><a href="pages/recipes.html">Recipies</a></li>
+                <li><a href="pages/test.html">Test</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="features">
+        <div class="flex-container">
+            <p>Digit Guesser,\n try drawing a number</p>
+            <button onclick="resetBoard()">Reset</button>
+            <div>
+                <div id="board"></div>
+                <div class="guess">
+
+                </div>
+            </div>
+            <p>Desc</p>
+        </div>
+        <div class="flex-container">
+            <p>Spinning ASCII Cube</p>
+            <pre id="ASCII"></pre>
+            <p>Desc</p>
+        </div>
+    </section>
+    <section>large s</section>
+    <footer>foot</footer>
+</body>
+</html>
