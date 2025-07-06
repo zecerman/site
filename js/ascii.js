@@ -7,7 +7,7 @@
 }
 */
 const COLS = 25    // characters across      (screen height)
-const ROWS = 9    // characters down        (screen width)
+const ROWS = 8    // characters down        (screen width)
 // INCLUDES WHITESPACE ^
 const SCALE = 10   // projection multiplier   (size of cube WITHIN screen)
 const DIST = 5 // camera distance           (perspective)

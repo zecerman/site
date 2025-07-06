@@ -17,14 +17,21 @@ body {
 
 /* Header & Navigation */
 .banner {
+    position: fixed;   /* take it out of the normal flow */
+    top: 0;            /* pin to top edge */
+    left: 0;           /* pin to left edge */
+    width: 100%;       /* span the full viewport width */
+    z-index: 1000;     /* keep it above everything else */
     background-color: #1f1f1f;
-    padding: 1rem 2rem;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
     display: flex;
     flex-direction: row; /* Ensures horizontal layout */
-    padding: 45px;
+    padding: 30px;
     gap: 20px; /* Adds spacing between items */
     font-size: 30px;
+}
+#buffer {
+    padding: 50px;
 }
 
 nav ul {
@@ -104,13 +111,19 @@ section:nth-of-type(2) {
 
 /* Footer */
 footer {
-    margin-top: auto;
+    margin: 0;
+    padding: 0;
     background-color: #1f1f1f;
-    padding: 1rem;
     text-align: center;
     font-size: 0.9rem;
     color: #888;
 }
+#footer-banner {
+    width: 100%;         /* 100% of viewport width */
+    height: auto;         /* preserve aspect ratio */
+    display: block;       /* remove inline spacing */
+}
+
 
 /* JS DEPENDNET CSS */
 /* Grid Container for Board */
