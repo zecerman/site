@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Tahoma, Geneva, Verdana, sans-serif;
     background-color: #121212;
     color: #f1f1f1;
     line-height: 1.6;
@@ -20,17 +20,19 @@ body {
     background-color: #1f1f1f;
     padding: 1rem 2rem;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-    position: sticky;
-    top: 0;
-    z-index: 100;
+    display: flex;
+    flex-direction: row; /* Ensures horizontal layout */
+    padding: 45px;
+    gap: 20px; /* Adds spacing between items */
+    font-size: 30px;
 }
 
 nav ul {
     display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* align items to the start (left) */
+    gap: 1rem;
     list-style: none;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
 }
 
 nav ul li a {
@@ -75,10 +77,6 @@ nav ul li a:hover {
 .flex-container p {
     font-size: 1.1rem;
 }
-
-
-
-
 
 /* Button Styling */
 button {
@@ -141,4 +139,16 @@ footer {
     margin-top: 1rem;
     font-size: 1.2rem;
     color: #ffca28;
+}
+
+#ASCII {
+    white-space: pre;           
+    font-family: monospace;     
+    line-height: 0.9;       
+    /* necessary CSS ^    my site specifc v */    
+     position: fixed;        /* or use absolute if you want it relative to a parent */
+    top: 0;
+    right: 0;
+    padding: 0px;
+    z-index: 1000;          /* ensures it appears on top */
 }
