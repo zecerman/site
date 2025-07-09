@@ -6,22 +6,26 @@
     <title>Document</title>
     <link rel="stylesheet" href="styles.css" type="text/css">
     <!--scripts-->
-    <script src="https://cdn.jsdelivr.net/npm/onnxjs/dist/onnx.min.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/onnxruntime-web/dist/ort.min.js"></script>
     <script src="js/ascii.js" defer></script>
-
     <script src="js/mnist.js" defer></script>
 </head>
 <body>
-    <header class="banner">
-        <p>Samuel Weiss</p>
-        <img src="meta/in.png" style="width:50px;height:50px;">
-    </header>
-    <div id="buffer">
-        <!--This element exists so that the banner does not cover the features on page load-->
-    </div>
-    <section class="features">
+    <section>
+        <header class="banner">
+            <p>Samuel Weiss</p>
+            <img src="meta/in.png" style="width:50px;height:50px;">
+            <img src="meta/in.png" style="width:50px;height:50px;">
+            <img src="meta/in.png" style="width:50px;height:50px;">
+            <img src="meta/in.png" style="width:50px;height:50px;">
+            <img src="meta/in.png" style="width:50px;height:50px;">
+        </header>
         <pre id="ASCII"></pre>
+        <div id="buffer">
+            <!--This element exists so that the banner does not cover the features on page load-->
+        </div>
+    </section>
+    <section class="features">
         <nav>
             <ul>
                 <li class="logo"><a href="index.html">Home</a></li>
@@ -31,17 +35,15 @@
             </ul>
         </nav>
         <div class="flex-container">
-            
-            <p>Digit Guesser,\n try drawing a number</p>
-            <button onclick="resetBoard()">Reset</button>
-            <div>
-                <div id="board"></div>
-                <div class="guess">
-
-                </div>
+            <h1>Digit Guesser</h1>
+            <div id="board-wrapper">
+                <div id="board"><!--filled by mnist.js--></div>
+                <div id="guess-chart"><!--filled by mnist.js--></div>
             </div>
-            <p>Desc</p>
+            <button onclick="resetBoard()">Reset</button>
+            <p>The model architecture is based on classic CNNs, written by hand in pytorch, and trained on the classic MNIST dataset.</p>
         </div>
+
         <div class="flex-container">
             <p>smth</p>
 
