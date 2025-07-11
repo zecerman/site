@@ -70,7 +70,7 @@ function resetBoard() {
 async function initModel() {
   // load the model, called once only
   try {
-    session = await ort.InferenceSession.create('/meta/onnx_model.onnx');
+    session = await ort.InferenceSession.create('meta/onnx_model.onnx');
     console.log('Model loaded successfully.')
   } catch (error) {
     console.error('Failed to load ONNX model:', error)
