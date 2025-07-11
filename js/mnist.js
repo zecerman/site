@@ -69,7 +69,7 @@ function resetBoard() {
 // ONNX functions
 async function initModel() {
     // load the model, called once only
-    session = await ort.InferenceSession.create('../meta/onnx_model.onnx');
+    session = await ort.InferenceSession.create('meta/onnx_model.onnx');
     console.log("Model loaded.");
 }
 
@@ -92,7 +92,6 @@ async function checkBoard() {
         // update guess w/ new correct probs
         const probs = softmax(output.data)
         updateGuess(probs)
-        console.log(...centeredData)
     } else {
         console.error('ONNX session not initialized yet.')
     }
