@@ -161,10 +161,10 @@ function updateGuess(probs) {
   })
 }
 
-window.onload = () => {
+window.onload = async () => {
 initBoard()
 initGuessBars()
-initModel()
+await initModel()
 
 // so that mouseover is not necessary to display predictions
 setInterval(checkBoard, 500)
