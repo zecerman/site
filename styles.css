@@ -21,7 +21,7 @@ body {
     top: 0;            /* pin to top edge */
     left: 0;           /* pin to left edge */
     width: 100%;       /* span the full viewport width */
-    z-index: 1000;     /* keep it above everything else */
+    z-index: 999;     /* keep it above everything else */
     background-color: #1f1f1f;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
     display: flex;
@@ -32,6 +32,17 @@ body {
 }
 #buffer {
     padding: 55px;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh; /* make it span the full height */
+    width: auto;   /* or set a fixed width like 200px */
+    background-color: #1f1f1f; /* optional for contrast */
+    z-index: 900; /* ensures it sits above other content */
+    padding: 1rem;
 }
 
 nav ul {
@@ -49,7 +60,7 @@ nav ul li a {
     border-radius: 4px;
 }
 
-nav ul li a:hover {
+a:hover {
     background-color: #333;
 }
 
@@ -66,6 +77,7 @@ nav ul li a:hover {
     gap: 2rem;
     padding: 2rem;
     justify-content: center;
+    margin-left: 155px;
 }
 
 .flex-container {
@@ -117,7 +129,7 @@ section:nth-of-type(2) {
 footer {
     margin: 0;
     padding: 0;
-    background-color: #1f1f1f;
+    background-color: #121212;
     text-align: center;
     font-size: 0.9rem;
     color: #888;
@@ -126,6 +138,19 @@ footer {
     width: 100%;         /* 100% of viewport width */
     height: auto;         /* preserve aspect ratio */
     display: block;       /* remove inline spacing */
+}
+
+.vscode-style {
+  background-color: #1e1e1e;         /* VS Code dark background */
+  color: greenyellow;                    /* Default text color */
+  font-family: 'Fira Code', Consolas, 'Courier New', monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  white-space: pre;                 /* preserves formatting */
+  padding: 1rem;
+  border-radius: 6px;
+  overflow-x: auto;                 /* horizontal scroll if needed */
+  tab-size: 4;                      /* spacing similar to editors */
 }
 
 
@@ -166,13 +191,10 @@ footer {
 }
 
 #ASCII {
+    color: #f1f1f1;
     white-space: pre;           
     font-family: monospace;     
     line-height: 0.9;       
-    /* necessary CSS ^    my site specifc v */    
-     position: fixed;        /* or use absolute if you want it relative to a parent */
-    top: 0;
-    right: 0;
-    padding: 0px;
-    z-index: 1000;          /* ensures it appears on top */
+    /* necessary CSS ^    
+       specific to my site v */    
 }

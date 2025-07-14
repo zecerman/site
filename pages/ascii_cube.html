@@ -1,3 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ascii Cube</title>
+    <link rel="stylesheet" href="/styles.css" type="text/css">
+    <!--scripts-->
+    <script src="/js/ascii.js" defer></script>
+</head>
+<body>
+    <section>
+        <header class="banner">
+            <p class="logo"><a href="/index.html" style="text-decoration:none">Home</a></p>
+            <p style="padding:0px 60px;">.js source code for zbuffer/matrix style ASCII cube</p>
+        </header>
+        <div id="buffer">
+            <!--This element exists so that the banner does not cover the features on page load-->
+        </div>
+    </section>
+<section class="features">
+    <div style="display: flex; flex-direction: column; align-items: center;">
+        <pre id="ASCII"></pre>
+
+        <div class="controls" style="margin-top: 1rem;">
+            <input id="cols-input" value="50" style="display:none;">
+            <input id="rows-input" value="30" style="display:none;">
+            <input id="dist-input" value="5" style="display:none;">
+            <div class="control">
+                <label>
+                    cube size <output id="scale-out"></output>
+                </label>
+                <input id="scale-input" type="range" min="1" max="38" value="20"/>
+            </div>
+        </div>
+    </div>
+</section>
+
+<pre class="vscode-style">
 // js/main.js  ─ ASCII spinning OBJECT based on the classic z-buffer approach:
 /* Must be used with the following css: 
 # your-id {
@@ -296,3 +335,8 @@ document.addEventListener('DOMContentLoaded', () => {
     initializeCubeSettings()
     setInterval(frame, 20)
 })
+</pre>
+
+
+</body>
+</html>
