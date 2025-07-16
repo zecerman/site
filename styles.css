@@ -195,6 +195,5 @@ footer {
     white-space: pre;           
     font-family: monospace;     
     line-height: 0.9;       
-    /* necessary CSS ^    
-       specific to my site v */    
+    /* necessary CSS ^ */  
 }
